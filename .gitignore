@@ -28,3 +28,4 @@ build/
 .vs/
 
 /*.ps1
+/furcadia-dream-runtime-analyzer/Binaries/analyzer-1.0.2.zip
