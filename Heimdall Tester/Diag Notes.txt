@@ -1,0 +1,13 @@
+ The laymans version.
+ Everyone connected is connected to a Heimdall.
+ Any command that affects you as a character, happens in Heimdall.
+ Every dream you go in, is a tribble.
+ There are hundreds.
+ Any command that affects a map, or people on a map, happens in Tribble.
+ Horton, there is one (per world)
+ Horton makes sure Heimdalls can talk to each other, and to the tribble.
+ Thats not totally accurate, as Cat is no doubt going to say - but it's a good TLDR easy to follow version. It's true, to a degree of true.
+
+ If a Heimdall breaks 1/6th of players are affected badly. If it hangs, 1/6th attempts to login fail. If we kill one, 1/6th of all players disconnect, the Heimdall restarts itself.
+ If a Tribble hangs or crashes, a map is broken, players cannot get into it or act inside it. If it is killed, the map restarts - and the dream loads into a new tribble process.
+ If Horton hangs, crshes or is killed, it's brown trousers time. Server restarts.
