@@ -1,4 +1,7 @@
-﻿namespace PathDiag
+﻿using System.Diagnostics;
+using System.Reflection;
+
+namespace PathDiag
 {
     partial class MainForm
     {
@@ -30,6 +33,12 @@
         {
             this.TabControl = new System.Windows.Forms.TabControl();
             this.pageProgram = new System.Windows.Forms.TabPage();
+            this.btnDefaultMaps = new System.Windows.Forms.Button();
+            this.btnOpenGlobalSkins = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbDefaultMaps = new System.Windows.Forms.TextBox();
+            this.tbGlobalSkins = new System.Windows.Forms.TextBox();
             this.btnOpenLocaldir = new System.Windows.Forms.Button();
             this.btnOpenDefaultPatch = new System.Windows.Forms.Button();
             this.btnOpenInstallPath = new System.Windows.Forms.Button();
@@ -86,12 +95,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbPathType = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.tbGlobalSkins = new System.Windows.Forms.TextBox();
-            this.tbDefaultMaps = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnOpenGlobalSkins = new System.Windows.Forms.Button();
-            this.btnDefaultMaps = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.pageProgram.SuspendLayout();
             this.pagePersonalized.SuspendLayout();
@@ -133,6 +136,60 @@
             this.pageProgram.TabIndex = 0;
             this.pageProgram.Text = "Program";
             this.pageProgram.UseVisualStyleBackColor = true;
+            // 
+            // btnDefaultMaps
+            // 
+            this.btnDefaultMaps.Location = new System.Drawing.Point(493, 82);
+            this.btnDefaultMaps.Name = "btnDefaultMaps";
+            this.btnDefaultMaps.Size = new System.Drawing.Size(75, 23);
+            this.btnDefaultMaps.TabIndex = 18;
+            this.btnDefaultMaps.Text = "Open";
+            this.btnDefaultMaps.UseVisualStyleBackColor = true;
+            this.btnDefaultMaps.Click += new System.EventHandler(this.btnDefaultMaps_Click);
+            // 
+            // btnOpenGlobalSkins
+            // 
+            this.btnOpenGlobalSkins.Location = new System.Drawing.Point(493, 56);
+            this.btnOpenGlobalSkins.Name = "btnOpenGlobalSkins";
+            this.btnOpenGlobalSkins.Size = new System.Drawing.Size(75, 23);
+            this.btnOpenGlobalSkins.TabIndex = 17;
+            this.btnOpenGlobalSkins.Text = "Open";
+            this.btnOpenGlobalSkins.UseVisualStyleBackColor = true;
+            this.btnOpenGlobalSkins.Click += new System.EventHandler(this.btnOpenGlobalSkins_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Default Maps:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Global Skins:";
+            // 
+            // tbDefaultMaps
+            // 
+            this.tbDefaultMaps.Location = new System.Drawing.Point(118, 84);
+            this.tbDefaultMaps.Name = "tbDefaultMaps";
+            this.tbDefaultMaps.ReadOnly = true;
+            this.tbDefaultMaps.Size = new System.Drawing.Size(369, 20);
+            this.tbDefaultMaps.TabIndex = 14;
+            // 
+            // tbGlobalSkins
+            // 
+            this.tbGlobalSkins.Location = new System.Drawing.Point(118, 58);
+            this.tbGlobalSkins.Name = "tbGlobalSkins";
+            this.tbGlobalSkins.ReadOnly = true;
+            this.tbGlobalSkins.Size = new System.Drawing.Size(369, 20);
+            this.tbGlobalSkins.TabIndex = 13;
             // 
             // btnOpenLocaldir
             // 
@@ -657,11 +714,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(562, 10);
+            this.label6.Location = new System.Drawing.Point(521, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 1;
-            this.label6.Text = "1.0.0";
+            this.label6.Text = "1.100.100.100";
             // 
             // cbPathType
             // 
@@ -685,65 +742,11 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // tbGlobalSkins
-            // 
-            this.tbGlobalSkins.Location = new System.Drawing.Point(118, 58);
-            this.tbGlobalSkins.Name = "tbGlobalSkins";
-            this.tbGlobalSkins.ReadOnly = true;
-            this.tbGlobalSkins.Size = new System.Drawing.Size(369, 20);
-            this.tbGlobalSkins.TabIndex = 13;
-            // 
-            // tbDefaultMaps
-            // 
-            this.tbDefaultMaps.Location = new System.Drawing.Point(118, 84);
-            this.tbDefaultMaps.Name = "tbDefaultMaps";
-            this.tbDefaultMaps.ReadOnly = true;
-            this.tbDefaultMaps.Size = new System.Drawing.Size(369, 20);
-            this.tbDefaultMaps.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Global Skins:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Default Maps:";
-            // 
-            // btnOpenGlobalSkins
-            // 
-            this.btnOpenGlobalSkins.Location = new System.Drawing.Point(493, 56);
-            this.btnOpenGlobalSkins.Name = "btnOpenGlobalSkins";
-            this.btnOpenGlobalSkins.Size = new System.Drawing.Size(75, 23);
-            this.btnOpenGlobalSkins.TabIndex = 17;
-            this.btnOpenGlobalSkins.Text = "Open";
-            this.btnOpenGlobalSkins.UseVisualStyleBackColor = true;
-            this.btnOpenGlobalSkins.Click += new System.EventHandler(this.btnOpenGlobalSkins_Click);
-            // 
-            // btnDefaultMaps
-            // 
-            this.btnDefaultMaps.Location = new System.Drawing.Point(493, 82);
-            this.btnDefaultMaps.Name = "btnDefaultMaps";
-            this.btnDefaultMaps.Size = new System.Drawing.Size(75, 23);
-            this.btnDefaultMaps.TabIndex = 18;
-            this.btnDefaultMaps.Text = "Open";
-            this.btnDefaultMaps.UseVisualStyleBackColor = true;
-            this.btnDefaultMaps.Click += new System.EventHandler(this.btnDefaultMaps_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 259);
+            this.ClientSize = new System.Drawing.Size(609, 256);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cbPathType);
             this.Controls.Add(this.label6);

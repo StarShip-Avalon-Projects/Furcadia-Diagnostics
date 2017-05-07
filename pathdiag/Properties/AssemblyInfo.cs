@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Furcadia Path Diagnostics Tool")]
 [assembly: AssemblyDescription("Tool that displays all Furcadia paths on your system.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("QuickFox.org")]
+[assembly: AssemblyCompany("tsproject.org")]
 [assembly: AssemblyProduct("Furcadia Path Diagnostics Tool")]
-[assembly: AssemblyCopyright("Copyright © 2009 by IceDragon of QuickFox.org")]
+[assembly: AssemblyCopyright("Copyright © 2009 by IceDragon of QuickFox.org, 2017 by Starship Avalon Projects")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -22,15 +22,4 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("4655aef2-5a08-4fbc-bd9e-a71d098fdfdc")]
 
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+

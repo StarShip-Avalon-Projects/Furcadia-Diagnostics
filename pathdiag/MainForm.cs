@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace PathDiag
@@ -18,6 +19,9 @@ namespace PathDiag
         {
             FurcadiaPaths = new Furcadia.IO.Paths();
             InitializeComponent();
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            this.label6.Text = fvi.FileVersion;
             RefreshData();
         }
 
