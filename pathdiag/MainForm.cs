@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace PathDiag
@@ -196,7 +197,7 @@ namespace PathDiag
             tbInstallFolder.Text = FurcadiaPaths.DefaultFurcadiaPath;
             tbGlobalSkins.Text = FurcadiaPaths.DefaultGlobalSkinsPath;
             tbDefaultMaps.Text = FurcadiaPaths.DefaultGlobalMapsPath;
-            tbDefaultPatchFolder.Text = FurcadiaPaths.DefaultFurcadiaPath + @"\patches\default";
+            tbDefaultPatchFolder.Text = Path.Combine(FurcadiaPaths.DefaultFurcadiaPath, @"patches", @"default");
 
             tbLocaldirPath.Text = (FurcadiaPaths.UsingLocaldir) ? FurcadiaPaths.LocaldirPath : "Not Available";
             btnOpenLocaldir.Enabled = FurcadiaPaths.UsingLocaldir;
