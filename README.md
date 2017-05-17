@@ -2,4 +2,6 @@
 Diagnostic Tools for the MMO Furcadia
 
 ## FilePath Diagnostics
-Locate the hidden system files and folder with this simple [tool](http://forums.furcadia.com/index.php?furcadia_session_id=982167-rcfu-yjd&showtopic=63786&pid=508986&st=60&#entry508986)
+![alt text](https://github.com/StarShip-Avalon-Projects/Furcadia-Diagnostics/raw/master/images/FPDiag.png "Furc Path Diagnostics")
+
+Locate the hidden system files and folder with this simple [tool](https://github.com/StarShip-Avalon-Projects/Furcadia-Diagnostics/raw/master/downloads/PathDiag%20v1.0.005.0516.zip)
