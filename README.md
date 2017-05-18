@@ -6,7 +6,7 @@ Diagnostic Tools for the MMO Furcadia
 
 Locate the hidden system files and folder with this simple Tool 
 
-###Requirements: 
+### Requirements: 
 
 Minimium OS Windows 7 with .Net Framework 4.5
 
