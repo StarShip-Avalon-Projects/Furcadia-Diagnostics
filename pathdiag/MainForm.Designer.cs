@@ -95,6 +95,7 @@ namespace PathDiag
             this.label6 = new System.Windows.Forms.Label();
             this.cbPathType = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.TabControl.SuspendLayout();
             this.pageProgram.SuspendLayout();
             this.pagePersonalized.SuspendLayout();
@@ -742,11 +743,23 @@ namespace PathDiag
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(282, 6);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(73, 13);
+            this.linkLabel1.TabIndex = 19;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "FilePath Docs";
+            this.linkLabel1.Click += linklable1_clicked;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 256);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cbPathType);
             this.Controls.Add(this.label6);
@@ -755,7 +768,7 @@ namespace PathDiag
             this.MaximumSize = new System.Drawing.Size(625, 295);
             this.MinimumSize = new System.Drawing.Size(625, 295);
             this.Name = "MainForm";
-            this.Text = "Furcadia/LibFurc Path Diagnostic Tool";
+            this.Text = "Furcadia/Furcadia-Frmework Path Diagnostic Tool";
             this.TabControl.ResumeLayout(false);
             this.pageProgram.ResumeLayout(false);
             this.pageProgram.PerformLayout();
@@ -834,6 +847,7 @@ namespace PathDiag
         private System.Windows.Forms.TextBox tbGlobalSkins;
         private System.Windows.Forms.Button btnDefaultMaps;
         private System.Windows.Forms.Button btnOpenGlobalSkins;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

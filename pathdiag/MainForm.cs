@@ -232,5 +232,10 @@ namespace PathDiag
         }
 
         #endregion Private Methods
+
+        private void linklable1_clicked(object sender, EventArgs e)
+        {
+            Process.Start("https://starship-avalon-projects.github.io/FurcadiaFramework/html/a23d6f60-970b-4881-ad5f-077563316c63.htm");
+        }
     }
 }
