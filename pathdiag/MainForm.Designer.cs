@@ -752,7 +752,7 @@ namespace PathDiag
             this.linkLabel1.TabIndex = 19;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "FilePath Docs";
-            this.linkLabel1.Click += linklable1_clicked;
+            this.linkLabel1.Click += new System.EventHandler(this.linklable1_clicked);
             // 
             // MainForm
             // 

@@ -12,4 +12,4 @@ Minimium OS Windows 7 with .Net Framework 4.5
 
 Linux/Mac: Wine with Mono for Windows
 
-[Release](https://github.com/StarShip-Avalon-Projects/Furcadia-Diagnostics/releases/tag/v1.0.005.0516 "Furcadia Path Diagnostic Tool")
+[Download](https://github.com/StarShip-Avalon-Projects/Furcadia-Diagnostics/releases/tag/v1.0.005.0516 "Furcadia Path Diagnostic Tool")
