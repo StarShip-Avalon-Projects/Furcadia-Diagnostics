@@ -96,6 +96,7 @@ namespace PathDiag
             this.cbPathType = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnDefaultPatchPermissions = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.pageProgram.SuspendLayout();
             this.pagePersonalized.SuspendLayout();
@@ -104,17 +105,21 @@ namespace PathDiag
             // 
             // TabControl
             // 
+            this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl.Controls.Add(this.pageProgram);
             this.TabControl.Controls.Add(this.pagePersonalized);
             this.TabControl.Controls.Add(this.pageCache);
             this.TabControl.Location = new System.Drawing.Point(12, 12);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(585, 239);
+            this.TabControl.Size = new System.Drawing.Size(585, 444);
             this.TabControl.TabIndex = 0;
             // 
             // pageProgram
             // 
+            this.pageProgram.Controls.Add(this.btnDefaultPatchPermissions);
             this.pageProgram.Controls.Add(this.btnDefaultMaps);
             this.pageProgram.Controls.Add(this.btnOpenGlobalSkins);
             this.pageProgram.Controls.Add(this.label3);
@@ -133,7 +138,7 @@ namespace PathDiag
             this.pageProgram.Location = new System.Drawing.Point(4, 22);
             this.pageProgram.Name = "pageProgram";
             this.pageProgram.Padding = new System.Windows.Forms.Padding(3);
-            this.pageProgram.Size = new System.Drawing.Size(577, 213);
+            this.pageProgram.Size = new System.Drawing.Size(577, 418);
             this.pageProgram.TabIndex = 0;
             this.pageProgram.Text = "Program";
             this.pageProgram.UseVisualStyleBackColor = true;
@@ -181,7 +186,7 @@ namespace PathDiag
             this.tbDefaultMaps.Location = new System.Drawing.Point(118, 84);
             this.tbDefaultMaps.Name = "tbDefaultMaps";
             this.tbDefaultMaps.ReadOnly = true;
-            this.tbDefaultMaps.Size = new System.Drawing.Size(369, 20);
+            this.tbDefaultMaps.Size = new System.Drawing.Size(283, 20);
             this.tbDefaultMaps.TabIndex = 14;
             // 
             // tbGlobalSkins
@@ -189,7 +194,7 @@ namespace PathDiag
             this.tbGlobalSkins.Location = new System.Drawing.Point(118, 58);
             this.tbGlobalSkins.Name = "tbGlobalSkins";
             this.tbGlobalSkins.ReadOnly = true;
-            this.tbGlobalSkins.Size = new System.Drawing.Size(369, 20);
+            this.tbGlobalSkins.Size = new System.Drawing.Size(283, 20);
             this.tbGlobalSkins.TabIndex = 13;
             // 
             // btnOpenLocaldir
@@ -227,7 +232,7 @@ namespace PathDiag
             this.tbLocaldirPath.Location = new System.Drawing.Point(118, 110);
             this.tbLocaldirPath.Name = "tbLocaldirPath";
             this.tbLocaldirPath.ReadOnly = true;
-            this.tbLocaldirPath.Size = new System.Drawing.Size(369, 20);
+            this.tbLocaldirPath.Size = new System.Drawing.Size(283, 20);
             this.tbLocaldirPath.TabIndex = 9;
             // 
             // label5
@@ -244,7 +249,7 @@ namespace PathDiag
             this.tbDefaultPatchFolder.Location = new System.Drawing.Point(118, 32);
             this.tbDefaultPatchFolder.Name = "tbDefaultPatchFolder";
             this.tbDefaultPatchFolder.ReadOnly = true;
-            this.tbDefaultPatchFolder.Size = new System.Drawing.Size(369, 20);
+            this.tbDefaultPatchFolder.Size = new System.Drawing.Size(283, 20);
             this.tbDefaultPatchFolder.TabIndex = 7;
             // 
             // label4
@@ -261,7 +266,7 @@ namespace PathDiag
             this.tbInstallFolder.Location = new System.Drawing.Point(118, 6);
             this.tbInstallFolder.Name = "tbInstallFolder";
             this.tbInstallFolder.ReadOnly = true;
-            this.tbInstallFolder.Size = new System.Drawing.Size(369, 20);
+            this.tbInstallFolder.Size = new System.Drawing.Size(283, 20);
             this.tbInstallFolder.TabIndex = 3;
             // 
             // label1
@@ -301,7 +306,7 @@ namespace PathDiag
             this.pagePersonalized.Controls.Add(this.tbSettingsPath);
             this.pagePersonalized.Location = new System.Drawing.Point(4, 22);
             this.pagePersonalized.Name = "pagePersonalized";
-            this.pagePersonalized.Size = new System.Drawing.Size(577, 213);
+            this.pagePersonalized.Size = new System.Drawing.Size(577, 418);
             this.pagePersonalized.TabIndex = 2;
             this.pagePersonalized.Text = "Personalized";
             this.pagePersonalized.UseVisualStyleBackColor = true;
@@ -754,19 +759,29 @@ namespace PathDiag
             this.linkLabel1.Text = "FilePath Docs";
             this.linkLabel1.Click += new System.EventHandler(this.linklable1_clicked);
             // 
+            // btnDefaultPatchPermissions
+            // 
+            this.btnDefaultPatchPermissions.Location = new System.Drawing.Point(412, 30);
+            this.btnDefaultPatchPermissions.Name = "btnDefaultPatchPermissions";
+            this.btnDefaultPatchPermissions.Size = new System.Drawing.Size(75, 23);
+            this.btnDefaultPatchPermissions.TabIndex = 19;
+            this.btnDefaultPatchPermissions.Text = "Permissions";
+            this.btnDefaultPatchPermissions.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 256);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(609, 461);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cbPathType);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TabControl);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(625, 295);
-            this.MinimumSize = new System.Drawing.Size(625, 295);
+            this.MaximumSize = new System.Drawing.Size(625, 500);
+            this.MinimumSize = new System.Drawing.Size(625, 500);
             this.Name = "MainForm";
             this.Text = "Furcadia/Furcadia-Frmework Path Diagnostic Tool";
             this.TabControl.ResumeLayout(false);
@@ -848,6 +863,7 @@ namespace PathDiag
         private System.Windows.Forms.Button btnDefaultMaps;
         private System.Windows.Forms.Button btnOpenGlobalSkins;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnDefaultPatchPermissions;
     }
 }
 

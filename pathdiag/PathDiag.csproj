@@ -60,6 +60,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyFileVersion.cs">
@@ -67,6 +68,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyFileVersion.t4</DependentUpon>
       <LastGenOutput>AssemblyFileVersion1.cs</LastGenOutput>
+    </Compile>
+    <Compile Include="frmFilePermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilePermissions.Designer.cs">
+      <DependentUpon>frmFilePermissions.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmFilePermissions.resx">
+      <DependentUpon>frmFilePermissions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
