@@ -1,5 +1,5 @@
 
-git fetch --all
+git pull --all
 IF "%~1"=="" GOTO BuildAll
 IF "%~1"=="VersionBump" GOTO VersionBump
 
@@ -11,3 +11,6 @@ goto :End
 msbuild /t:BuildAll  Solution.build
 
 :End
+git add --all
+git commit -m"Update docs" --all
+git push
