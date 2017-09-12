@@ -7,7 +7,7 @@ git submodule update -f --merge
 set GIT_STATUS=%ERRORLEVEL% 
 if not %GIT_STATUS%==0 goto fail 
 
-git submodule foreach "git pull"
+git submodule foreach "git pull -f"
 set GIT_STATUS=%ERRORLEVEL% 
 if not %GIT_STATUS%==0 goto fail 
 
