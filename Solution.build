@@ -17,7 +17,7 @@
     <!-- Compile whole solution in release mode -->
     <MSBuild
         Projects="FurcadiaDiagnostics.sln"
-        Targets="Build"
+        Targets="Restore;Build"
         Properties="Configuration=$(Configuration);Platform=Any CPU" />
   </Target>
 
