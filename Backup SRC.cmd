@@ -53,6 +53,9 @@ git submodule foreach "git commit -ma'Auto Update SubModules'"
 
 git push -f --all --recurse-submodules=on-demand
 set GIT_STATUS=%ERRORLEVEL% 
-if not %GIT_STATUS%==0 goto fail 
+if not %GIT_STATUS%==0 goto eof 
 
 git request-pull master https://github.com/StarShip-Avalon-Projects/Furcadia-Diagnostics.git
+
+:eof
+exit /b 0
