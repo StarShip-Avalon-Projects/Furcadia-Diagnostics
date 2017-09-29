@@ -1,4 +1,6 @@
 call UpdateSrc.cmd
+set BUILD_STATUS=%ERRORLEVEL% 
+if not %BUILD_STATUS%==0 goto fail 
 
 IF "%~1"=="" GOTO BuildAll
 IF "%~1"=="VersionBump" GOTO VersionBump
