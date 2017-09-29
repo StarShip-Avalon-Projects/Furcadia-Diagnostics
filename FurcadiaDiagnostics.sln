@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dream Runtime Analyzer", "f
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{545CF8BE-2577-40C7-90C4-483F7489493E}"
 	ProjectSection(SolutionItems) = preProject
-		..\Furcadia Frame Work for Third Party Programs\Backup SRC.cmd = ..\Furcadia Frame Work for Third Party Programs\Backup SRC.cmd
+		Backup SRC.cmd = Backup SRC.cmd
 		README.md = README.md
-		..\Furcadia Frame Work for Third Party Programs\Solution.build = ..\Furcadia Frame Work for Third Party Programs\Solution.build
+		Solution.build = Solution.build
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account Login Checker", "FurcadiaAccountLogin\Account Login Checker.csproj", "{3E46C988-658E-4E27-822C-6A3B0A9B983F}"
