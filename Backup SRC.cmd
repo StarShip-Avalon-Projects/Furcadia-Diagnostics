@@ -38,6 +38,10 @@ if not %GIT_STATUS%==0 goto eof
 
 git submodule foreach "git commit -m'Auto Update SubModules'"
 
+git submodule foreach "git push"
+set GIT_STATUS=%ERRORLEVEL% 
+if not %GIT_STATUS%==0 goto eof
+
 git commit -m"Auto Version Update"
 set GIT_STATUS=%ERRORLEVEL% 
 if not %GIT_STATUS%==0 goto eof 
@@ -51,13 +55,5 @@ git request-pull master https://github.com/StarShip-Avalon-Projects/Furcadia-Dia
 
 :eof
 exit /b 0
-=======
-git commit -m"Update docs" --all
 
-git submodule foreach "git add --all"
-git submodule foreach "git commit -m'Auto Update SubModules'-a"
-git submodule foreach "git push -f origin HEAD:master"
-git push -f --all --recurse-submodules=on-demand
-
-git request-pull master https://github.com/StarShip-Avalon-Projects/Furcadia-Diagnostics.git
 
