@@ -1,28 +1,22 @@
-call UpdateSrc.cmd
-set BUILD_STATUS=%ERRORLEVEL% 
-if not %BUILD_STATUS%==0 goto fail 
 
 IF "%~1"=="" GOTO BuildAll
 IF "%~1"=="VersionBump" GOTO VersionBump
 
 :VersionBump
-msbuild /t:IncrementVersions;BuildAll  Solution.build
+msbuild /t:IncrementVersions  Solution.build
 set BUILD_STATUS=%ERRORLEVEL% 
-if %BUILD_STATUS%==0 goto BuildRelease 
 if not %BUILD_STATUS%==0 goto fail 
  
 :BuildAll
 msbuild /t:BuildAll  Solution.build
 set BUILD_STATUS=%ERRORLEVEL% 
-if %BUILD_STATUS%==0 goto BuildRelease 
 if not %BUILD_STATUS%==0 goto fail 
 
 :BuildRelease
- msbuild /t:Build /property:Configuration=Release Solution.build
+msbuild /t:Build /property:Configuration=Release Solution.build
  set BUILD_STATUS=%ERRORLEVEL% 
-
 if %BUILD_STATUS%==0 goto end 
-if not %BUILD_STATUS%==0 goto fail 
+if not %BUILD_STATUS%==0 goto fail  
  
 :fail 
 pause 
@@ -52,5 +46,3 @@ git request-pull master https://github.com/StarShip-Avalon-Projects/Furcadia-Dia
 
 :eof
 exit /b 0
-
-
