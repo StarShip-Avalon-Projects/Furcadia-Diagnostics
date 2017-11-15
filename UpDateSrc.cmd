@@ -1,13 +1,7 @@
 
-git pull --recurse-submodules=on-demand
+git.exe pull --recurse-submodules=yes
 set GIT_STATUS=%ERRORLEVEL% 
 if not %GIT_STATUS%==0 goto fail 
-
-set GIT_STATUS=%ERRORLEVEL% 
-if not %GIT_STATUS%==0 goto fail
-
-
-
 
 :eof
 exit /b 0
